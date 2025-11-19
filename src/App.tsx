@@ -28,21 +28,23 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/landing" element={<Landing />} />
-            <Route path="/customer" element={<CustomerDashboard />} />
-            <Route path="/order" element={<OrderMenu />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/" element={<Index />} />
-            <Route path="/orders" element={<Orders />} />
-            <Route path="/customers" element={<Customers />} />
-            <Route path="/reservations" element={<Reservations />} />
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/catering" element={<Catering />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/settings" element={<Settings />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="/admin" element={<Index />} />
+
+              <Route path="/customer" element={<CustomerDashboard />} />
+              <Route path="/order" element={<OrderMenu />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/customers" element={<Customers />} />
+              <Route path="/reservations" element={<Reservations />} />
+              <Route path="/menu" element={<Menu />} />
+              <Route path="/catering" element={<Catering />} />
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/settings" element={<Settings />} />
+
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+
         </BrowserRouter>
       </CartProvider>
     </TooltipProvider>
