@@ -36,7 +36,7 @@ const Landing = () => {
                   Customer Portal
                 </Button>
               </Link>
-              <Link to="/">
+              <Link to="/admin">
                 <Button className="bg-accent hover:bg-accent/90">Admin Dashboard</Button>
               </Link>
             </div>
