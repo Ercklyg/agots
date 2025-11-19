@@ -56,7 +56,7 @@ const Landing = () => {
               Since decades ago, Agot's Restaurant has been serving traditional Filipino dishes made with locally sourced ingredients and love.
             </p>
             <div className="flex items-center justify-center gap-4 pt-6">
-              <Link to="/customer">
+              <Link to="/order">
                 <Button size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8">
                   Order Now
                 </Button>
@@ -112,7 +112,7 @@ const Landing = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Link to="/customer">
+            <Link to="/order">
               <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white">
                 View Full Menu
               </Button>

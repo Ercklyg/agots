@@ -67,16 +67,23 @@ const CustomerDashboard = () => {
       <div className="container mx-auto px-6 py-8">
         {/* Welcome Section */}
         <div className="mb-8">
-          <div className="flex items-center gap-4 mb-4">
-            <Avatar className="h-16 w-16 bg-primary">
-              <AvatarFallback className="bg-primary text-primary-foreground text-xl">
-                JD
-              </AvatarFallback>
-            </Avatar>
-            <div>
-              <h1 className="text-3xl font-bold text-foreground">Welcome back, John!</h1>
-              <p className="text-muted-foreground">Manage your orders, reservations, and rewards</p>
+          <div className="flex items-center justify-between gap-4 mb-4">
+            <div className="flex items-center gap-4">
+              <Avatar className="h-16 w-16 bg-primary">
+                <AvatarFallback className="bg-primary text-primary-foreground text-xl">
+                  JD
+                </AvatarFallback>
+              </Avatar>
+              <div>
+                <h1 className="text-3xl font-bold text-foreground">Welcome back, John!</h1>
+                <p className="text-muted-foreground">Manage your orders, reservations, and rewards</p>
+              </div>
             </div>
+            <Link to="/order">
+              <Button className="bg-accent hover:bg-accent/90" size="lg">
+                🍽️ Order Now
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -154,7 +161,9 @@ const CustomerDashboard = () => {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle>Order History</CardTitle>
-                  <Button className="bg-accent hover:bg-accent/90">New Order</Button>
+                  <Link to="/order">
+                    <Button className="bg-accent hover:bg-accent/90">New Order</Button>
+                  </Link>
                 </div>
               </CardHeader>
               <CardContent>
@@ -195,7 +204,9 @@ const CustomerDashboard = () => {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle>My Reservations</CardTitle>
-                  <Button className="bg-accent hover:bg-accent/90">New Reservation</Button>
+                  <Link to="/order">
+                    <Button className="bg-accent hover:bg-accent/90">Order Food</Button>
+                  </Link>
                 </div>
               </CardHeader>
               <CardContent>
