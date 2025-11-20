@@ -94,7 +94,7 @@ const Feedback = () => {
   const pendingCount = feedbackData.filter(f => f.status === "pending").length;
 
   return (
-    <div className="flex min-h-screen w-full bg-background">
+    <div className="pl-64 min-h-screen w-full bg-background">
       <DashboardSidebar />
       <div className="flex-1">
         <DashboardHeader />

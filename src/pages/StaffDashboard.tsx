@@ -62,8 +62,6 @@ const StaffDashboard = () => {
   };
 
   return (
-    <div className="flex min-h-screen w-full bg-background">
-      <DashboardSidebar />
       <div className="flex-1">
         <DashboardHeader />
         <main className="p-8">
@@ -236,7 +234,6 @@ const StaffDashboard = () => {
           </Card>
         </main>
       </div>
-    </div>
   );
 };
 
