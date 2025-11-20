@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ProvideOrderFeedback } from "@/components/ProvideOrderFeedback";
 import { 
   ShoppingBag, 
   Calendar, 
@@ -49,13 +50,26 @@ const CustomerDashboard = () => {
               <span className="text-2xl font-bold">Agot's Restaurant</span>
             </div>
             <div className="flex items-center gap-4">
-              <Link to="/landing">
+              <Link to="/order">
+                <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
+                  <UtensilsCrossed className="h-4 w-4 mr-2" />
+                  Order Now
+                </Button>
+              </Link>
+              <Link to="/">
                 <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
                   <Home className="h-4 w-4 mr-2" />
                   Home
                 </Button>
               </Link>
-              <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
+              <Button 
+                variant="ghost" 
+                className="text-primary-foreground hover:bg-primary-foreground/10"
+                onClick={() => {
+                  localStorage.clear();
+                  window.location.href = "/";
+                }}
+              >
                 <LogOut className="h-4 w-4 mr-2" />
                 Logout
               </Button>
@@ -187,7 +201,10 @@ const CustomerDashboard = () => {
                           </div>
                           <div className="text-right space-y-2">
                             <p className="text-2xl font-bold text-accent">{order.total}</p>
-                            <Button size="sm" variant="outline">Reorder</Button>
+                            <div className="flex flex-col gap-2">
+                              <Button size="sm" variant="outline">Reorder</Button>
+                              <ProvideOrderFeedback orderId={order.id} />
+                            </div>
                           </div>
                         </div>
                       </CardContent>
