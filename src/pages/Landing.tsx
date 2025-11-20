@@ -31,13 +31,13 @@ const Landing = () => {
               <a href="#contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Contact</a>
             </div>
             <div className="flex items-center gap-3">
-              <Link to="/customer">
+              <Link to="/login">
                 <Button variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
-                  Customer Portal
+                  Login
                 </Button>
               </Link>
-              <Link to="/admin">
-                <Button className="bg-accent hover:bg-accent/90">Admin Dashboard</Button>
+              <Link to="/login">
+                <Button className="bg-accent hover:bg-accent/90">Sign Up</Button>
               </Link>
             </div>
           </div>

@@ -7,6 +7,8 @@ import {
   PartyPopper,
   BarChart3,
   Settings,
+  MessageSquare,
+  Megaphone,
   ChevronLeft
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
@@ -15,12 +17,14 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 const menuItems = [
-  { title: "Dashboard", icon: LayoutDashboard, url: "/" },
+  { title: "Dashboard", icon: LayoutDashboard, url: "/admin" },
   { title: "Orders", icon: ShoppingCart, url: "/orders" },
   { title: "Customers", icon: Users, url: "/customers" },
   { title: "Reservations", icon: Calendar, url: "/reservations" },
   { title: "Menu", icon: UtensilsCrossed, url: "/menu" },
   { title: "Catering", icon: PartyPopper, url: "/catering" },
+  { title: "Feedback", icon: MessageSquare, url: "/feedback" },
+  { title: "Announcements", icon: Megaphone, url: "/announcements" },
   { title: "Analytics", icon: BarChart3, url: "/analytics" },
   { title: "Settings", icon: Settings, url: "/settings" },
 ];
