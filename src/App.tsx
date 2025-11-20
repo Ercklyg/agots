@@ -16,6 +16,11 @@ import Menu from "./pages/Menu";
 import Catering from "./pages/Catering";
 import Analytics from "./pages/Analytics";
 import Settings from "./pages/Settings";
+import StaffDashboard from "./pages/StaffDashboard";
+import RiderDashboard from "./pages/RiderDashboard";
+import Announcements from "./pages/Announcements";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +46,11 @@ const App = () => (
               <Route path="/catering" element={<Catering />} />
               <Route path="/analytics" element={<Analytics />} />
               <Route path="/settings" element={<Settings />} />
+              <Route path="/staff" element={<StaffDashboard />} />
+              <Route path="/rider" element={<RiderDashboard />} />
+              <Route path="/announcements" element={<Announcements />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
 
               <Route path="*" element={<NotFound />} />
             </Routes>
